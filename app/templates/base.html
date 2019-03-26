@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block tatle %}想去拯救世界{% endblock %}</title>
+	</head>
+
+	<link href="/static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+	<link href="logo.ico" rel="shortcut icon" />
+	<script src="/static/plugin/jquery.min.js"></script>
+	<script src="/static/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/plugin/jquery.page.js"></script>
+	<script src="/static/js/common.js"></script>
+	<script src="/static/js/snowy.js"></script>
+    {% block style %}{% endblock %}
+	<body>
+		<div class="w_header">
+			<div class="container">
+				<div class="w_header_top" style="height: 35px;text-align: center;margin-left: 200px">
+					<span class="w_header_nav">
+					<ul>
+						<li><a href="" style="color: honeydew;width: 200px">郭阳俊的博客</a></li>
+						<li><a href="/">首页</a></li>
+						<li><a href="/about/">关于</a></li>
+						<li><a href="/orderlist/">文章</a></li>
+						<li><a href="/orderadd/">发布文章</a></li>
+					</ul>
+				</span>
+				</div>
+			</div>
+		</div>
+        {% block add %}
+        {% endblock %}
+		<div class="w_foot">
+			<div class="w_foot_copyright">
+				版本号&copy; 2019.3.0
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var $backToTopEle = $('<a href="javascript:void(0)" class="Hui-iconfont toTop" title="返回顶部" alt="返回顶部" style="display:none">^</a>').appendTo($("body")).click(function() {
+			$("html, body").animate({ scrollTop: 0 }, 120);
+		});
+		var backToTopFun = function() {
+			var st = $(document).scrollTop(),
+				winh = $(window).height();
+			(st > 0) ? $backToTopEle.show(): $backToTopEle.hide();
+			/*IE6下的定位*/
+			if(!window.XMLHttpRequest) {
+				$backToTopEle.css("top", st + winh - 166);
+			}
+		};
+		$(function() {
+			$(window).on("scroll", backToTopFun);
+			backToTopFun();
+		});
+	</script>
+
+</html>

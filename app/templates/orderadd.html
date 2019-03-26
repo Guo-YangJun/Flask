@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block tatle %}
+    发布
+{% endblock %}
+{% block style %}
+{% endblock %}
+{% block add %}
+      <div style="height: 700px;padding-top:100px;padding-left: 200px">
+          <form role="form" action="" method="post" enctype="multipart/form-data">
+              <div style="padding-top: 20px">
+                  <label>文章标题</label>
+                  <input type = "text" name="title">
+              </div>
+              <div style="padding-top: 20px">
+                  <label>文章作者</label>
+                  <input type = "text" name="author">
+              </div>
+              <div style="padding-top: 20px">
+                  <label>文章类型</label>
+                  <input type = "text" name="types">
+              </div>
+              <div style="padding-top: 20px">
+                  <label>文章描述</label>
+                  <textarea name="description"></textarea>
+              </div>
+              <div style="padding-top: 20px">
+                  <label>文章内容</label>
+                  <textarea name="content"></textarea>
+              </div>
+              <div style="padding-top: 20px">
+                  <label>文章图片</label>
+                  <input type = "file" name="picture">
+              </div>
+              <div style="padding-top: 20px">
+                  <input class="btn" type="submit" value="提交">
+              </div>
+          </form>
+      </div>
+{% endblock %}
